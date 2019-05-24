@@ -473,7 +473,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"color:white; text-align: center\">\n    <table>\n        <th>Days</th>\n        <th>Hours</th>\n        <th>Minutes</th>\n        <th>Seconds</th>\n        <tbody>\n        <tr>\n            <td>{{days}}</td>\n            <td>{{hours}}</td>\n            <td>{{minutes}}</td>\n            <td>{{seconds}}</td>\n        </tr>\n        </tbody>\n    </table>\n</div>\n"
+module.exports = "<div style=\"color:white; text-align: center\">\n    <table>\n        <th>Days</th>\n        <th>Hours</th>\n        <th>Minutes</th>\n        <th>Seconds</th>\n        <tbody>\n        <tr>\n            <td>{{days}}</td>\n            <td>{{hours}}</td>\n            <td>{{minutes}}</td>\n            <td>{{seconds}}</td>\n        </tr>\n        </tbody>\n    </table>\n\n</div>\n"
 
 /***/ }),
 
@@ -507,11 +507,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var TimerComponent = /** @class */ (function () {
     function TimerComponent() {
+        this.diff = 0;
+        this.days = 0;
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
     }
     TimerComponent.prototype.ngOnInit = function () {
         var _this = this;
         setInterval(function () {
             _this.diff = moment__WEBPACK_IMPORTED_MODULE_2__["utc"](_this.endDate).diff(moment__WEBPACK_IMPORTED_MODULE_2__["utc"]());
+            if (_this.diff < 0) {
+                return;
+            }
             _this.days = _this.getDays(_this.diff);
             _this.hours = _this.getHours(_this.diff);
             _this.minutes = _this.getMinutes(_this.diff);
