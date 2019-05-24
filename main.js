@@ -391,6 +391,7 @@ var AppComponent = /** @class */ (function () {
         this.http = http;
         this.title = 'After9';
         this.baseUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].baseUrl;
+        this.openDate = moment__WEBPACK_IMPORTED_MODULE_4__('2019-05-24 21:00:00');
     }
     AppComponent.prototype.getTimeOpen = function () {
         var _this = this;
@@ -399,7 +400,7 @@ var AppComponent = /** @class */ (function () {
         });
     };
     AppComponent.prototype.ngOnInit = function () {
-        this.getTimeOpen();
+        //this.getTimeOpen();
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
