@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bg\">\n<app-panorama></app-panorama>\n</div>\n"
+module.exports = "<div class=\"center\">\n    <h1>After9 is Closed for Renovations</h1>\n</div>\n\n<app-panorama></app-panorama>\n"
 
 /***/ }),
 
