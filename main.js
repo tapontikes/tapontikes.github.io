@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bg\">\n    <h1>After9 is Closed for Renovations</h1>\n</div>\n\n<app-panorama [src]=\"'assets/images/panorama_kitchen.jpg'\"></app-panorama>\n<hr>\n<br>\n<br>\n<app-panorama [src]=\"'assets/images/panorama_livingRoom.jpg'\"></app-panorama>\n"
+module.exports = "<div class=\"bg\">\n    <h1>After9 is Closed for Renovations</h1>\n    <pre><i>*swipe images to pan around the room</i></pre>\n</div>\n\n<app-panorama [cameraPosition]=\"{x:-0.7150249741443926, y:0.040044596219549665, z:0.6979510847211458}\" [src]=\"'assets/images/panorama_kitchen.jpg'\"></app-panorama>\n<hr>\n<br>\n<br>\n<app-panorama [cameraPosition]=\"{x: 0.9456662287475143, y: 0.3247524597234956, z: 0.01585003817008898}\" [src]=\"'assets/images/panorama_livingRoom.jpg'\"></app-panorama>\n"
 
 /***/ }),
 
@@ -175,7 +175,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div #pano class=\"pano\"></div>\n"
+module.exports = "<div (click)=\"onClick($event)\" #pano class=\"pano\"></div>\n"
 
 /***/ }),
 
@@ -210,9 +210,18 @@ var PanoramaComponent = /** @class */ (function () {
     function PanoramaComponent() {
     }
     PanoramaComponent.prototype.ngOnInit = function () {
-        this.viewer = new _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__["Viewer"]({ container: this.panoramaDiv.nativeElement });
+        var options = {
+            container: this.panoramaDiv.nativeElement,
+            cameraFov: 70
+        };
+        this.viewer = new _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__["Viewer"](options);
+        this.viewer.getCamera().position.set(this.cameraPosition.x, this.cameraPosition.y, this.cameraPosition.z);
         this.panorama = new _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__["ImagePanorama"](this.src);
         this.viewer.add(this.panorama);
+    };
+    PanoramaComponent.prototype.onClick = function ($event) {
+        console.log('s');
+        console.log(this.viewer.getCamera());
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('pano'),
@@ -222,6 +231,10 @@ var PanoramaComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
     ], PanoramaComponent.prototype, "src", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], PanoramaComponent.prototype, "cameraPosition", void 0);
     PanoramaComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-panorama',
