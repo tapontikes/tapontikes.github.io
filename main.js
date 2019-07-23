@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"center\">\n    <h1>After9 is Closed for Renovations</h1>\n</div>\n\n<app-panorama></app-panorama>\n"
+module.exports = "<div class=\"bg\">\n    <h1>After9 is Closed for Renovations</h1>\n</div>\n\n<app-panorama [src]=\"'assets/images/panorama_kitchen.jpg'\"></app-panorama>\n<hr>\n<br>\n<br>\n<app-panorama [src]=\"'assets/images/panorama_livingRoom.jpg'\"></app-panorama>\n"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "<div class=\"center\">\n    <h1>After9 is Closed for Renovatio
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".bg {\n  color: white;\n  text-align: center;\n  margin-top: 3em;\n  font-size: 150%; }\n\n.center {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RvbS9EZXNrdG9wL3RhcG9udGlrZXMuZ2l0aHViLmlvL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGtCQUFrQjtFQUNsQixlQUFjO0VBQ2QsZUFBYyxFQUFBOztBQUdoQjtFQUNFLGNBQWM7RUFDZCxpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLFVBQVUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5iZ3tcbiAgY29sb3I6d2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDozZW07XG4gIGZvbnQtc2l6ZToxNTAlO1xufVxuXG4uY2VudGVyIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gIHdpZHRoOiA1MCU7XG59XG4iXX0= */"
+module.exports = ".bg {\n  color: white;\n  text-align: center;\n  margin-top: 3em;\n  font-size: 150%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RvbS9EZXNrdG9wL3RhcG9udGlrZXMuZ2l0aHViLmlvL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGtCQUFrQjtFQUNsQixlQUFjO0VBQ2QsZUFBYyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJne1xuICBjb2xvcjp3aGl0ZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW4tdG9wOjNlbTtcbiAgZm9udC1zaXplOjE1MCU7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -175,7 +175,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<canvas></canvas>\n"
+module.exports = "<div #pano class=\"pano\"></div>\n"
 
 /***/ }),
 
@@ -186,7 +186,7 @@ module.exports = "<canvas></canvas>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "canvas {\n  width: 100%;\n  height: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RvbS9EZXNrdG9wL3RhcG9udGlrZXMuZ2l0aHViLmlvL3NyYy9hcHAvY29tcG9uZW50cy9wYW5vcmFtYS9wYW5vcmFtYS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVU7RUFDVixZQUFXLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3Bhbm9yYW1hL3Bhbm9yYW1hLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiY2FudmFze1xuICB3aWR0aDoxMDAlO1xuICBoZWlnaHQ6MTAwJTtcbn1cbiJdfQ== */"
+module.exports = ".pano {\n  height: 25em; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3RvbS9EZXNrdG9wL3RhcG9udGlrZXMuZ2l0aHViLmlvL3NyYy9hcHAvY29tcG9uZW50cy9wYW5vcmFtYS9wYW5vcmFtYS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcGFub3JhbWEvcGFub3JhbWEuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGFub3tcbiAgaGVpZ2h0OjI1ZW07XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -202,18 +202,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PanoramaComponent", function() { return PanoramaComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _node_modules_panolens__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/panolens */ "./node_modules/panolens/build/panolens.module.js");
+/* harmony import */ var _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/panolens/build/panolens.module.js */ "./node_modules/panolens/build/panolens.module.js");
 
 
 
 var PanoramaComponent = /** @class */ (function () {
     function PanoramaComponent() {
-        var panorama = new _node_modules_panolens__WEBPACK_IMPORTED_MODULE_2__["ImagePanorama"]('assets/images/pano.JPG');
-        var viewer = new _node_modules_panolens__WEBPACK_IMPORTED_MODULE_2__["Viewer"]();
-        viewer.add(panorama);
     }
     PanoramaComponent.prototype.ngOnInit = function () {
+        this.viewer = new _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__["Viewer"]({ container: this.panoramaDiv.nativeElement });
+        this.panorama = new _node_modules_panolens_build_panolens_module_js__WEBPACK_IMPORTED_MODULE_2__["ImagePanorama"](this.src);
+        this.viewer.add(this.panorama);
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('pano'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+    ], PanoramaComponent.prototype, "panoramaDiv", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], PanoramaComponent.prototype, "src", void 0);
     PanoramaComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-panorama',
